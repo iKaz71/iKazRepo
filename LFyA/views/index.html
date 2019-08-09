@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang = "es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>Facultad de Ingenier&iacute;a</title>
+
+    <script src="./src/components/simbolosMuertosClase.js"></script>
+    <script src="./src/components/simbolosInaccesibles.js"></script>
+    <script src="./src/components/simbolosVacios.js"></script>
+    <script src="./src/components/SimbolosUnitarios.js"></script>
+	<script src="./src/components/simbolosMuertosClase2.js"></script>
+    <script src="./src/components/simbolosInaccesibles2.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./component.css" />
+
+    <!-- Bootswatch
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/pulse/bootstrap.min.css" rel="stylesheet" integrity="sha384-c0rj6xRl6Zm4U4BwLaWhUoP/xPI8Sq+9Gt0F+JO5DSLZN0Ur0Ihc6rU59Rbgk1zV" crossorigin="anonymous"> -->
+    <link href="styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		
+		
+	 <style>
+  body {
+      position: relative; 
+	 
+  }
+  #section1 {padding-top:0px;height:500px;color: #fff; background-color: #d50000;height: auto;}
+  #section2 {padding-top:px;height:500px;color: #fff; background-color: #6200EA;height: auto;}
+  #section3 {padding-top:0px;height:500px;color: #fff; background-color: #00E5FF;height: auto;}
+  #section4 {padding-top:0px;height:500px;color: #fff; background-color: #00C853;height: auto;}
+  #section5 {padding-top:0px;height:500px;color: #fff; background-color: #4E342E;height: auto;}
+  #section6 {padding-top:0px;height:500px;color: #fff; background-color: #6200EA;height: auto;}
+  #section7 {padding-top:0px;height:500px;color: #fff; background-color: #00E5FF;height: auto;}
+  #section8 {padding-top:0px;height:500px;color: #fff; background-color: #AEEA00;height: auto;}
+  #hack1 {height: 500px; overflow: auto;padding-top: 0px;}
+  
+  
+  
+  </style>	
+		
+		
+		
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse ">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" href="#">Lenguajes Formales y Aut&oacute;matas</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="#"><a href="#">Home</a></li>
+					
+				</li>
+				<li><a href="./GramaticasManual.pdf" target = "_blank">Manual de Usuario</a></li>
+		<!--		<li><a href="#">Page 3</a></li> -->
+				</ul>
+				
+			</div>
+			</div>
+	</nav>
+
+
+
+
+
+    
+    
+    <div class="container" id="container">
+        <h1>Transformar una Gram&Aacute;tica Impropia a Propia</h1> 
+      
+
+            <p class="lead"></p>
+            <form id="alfabeto">
+                    <input type="text" class="form-control" aria-describedby="sizing-addon1" value="" name="alfabeto" placeholder="Alfabeto (separe cada miembro por una coma, la cadena vac&iacute;a se representa con un punto)"  >
+            </form>
+        <br>
+            <form id="form1"></form>
+            <form id="form2"></form>
+            <div>
+                    <button class="btn btn-primary" onclick="agregarInputs()">Agregar</button>
+                    <button id="iniciar"  class="btn btn-success" onclick="iniciar()">Iniciar</button>
+                    <button  class="btn btn-danger" onclick="window.location.href='index.html'">Reiniciar</button>
+            </div>
+        <br>
+            
+
+				<body data-spy="scroll" data-target=".navbar" data-offset="50">	
+						<nav class="nav nav-pills "> 
+							<div class="container-fluid">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>                        
+									</button>
+								
+								</div>
+							<div>
+					  <div  >
+						<ul class="nav nav-pills" role="tablist">
+						  <li><a href="#section1">Inicio</a></li>
+						 <li> <a href="#section2">Paso 1</a></li>
+						  <li><a href="#section3">Paso 2</a></li>
+						  <li><a href="#section4">Paso 3</a></li>
+						  <li><a href="#section5">Paso 4</a></li>
+						  <li><a href="#section6">Paso 5</a></li>
+						  <li><a href="#section7">Paso 6</a></li>
+						  <li><a href="#section8">Resultado</a></li>
+						  
+						<ul>	
+					  </div>
+					</div>
+				  </div>
+				</nav>  
+
+
+    
+   <div class="jumbotron" id = "hack1">
+  
+  
+ 
+
+				 
+
+				<div id="section1" class="container-fluid" >
+				  <h1>GRAM&Aacute;TICA INICIAL</h1>
+				  <p id="hack.1"></p>
+				  
+				  
+				  
+				
+				  
+				</div>
+				<div id="section2" class="container-fluid">
+				  <h1>S&Iacute;MBOLOS MUERTOS</h1>
+				  <p id="hack.2"></p>
+				  
+				</div>
+				<div id="section3" class="container-fluid">
+				  <h1>S&Iacute;MBOLOS INACCESIBLES</h1>
+				  <p id="hack.3"></p>
+				  </div>
+				  
+				  
+				  
+				  <div id="section4" class="container-fluid">
+				  <h1>S&Iacute;MBOLOS VAC&Iacute;OS</h1>
+				  <p id="hack.4"></p>
+				  
+				</div>
+				  
+				  
+				  
+				  <div id="section5" class="container-fluid">
+				  <h1>S&Iacute;MBOLOS UNITARIOS</h1>
+				  <p id="hack.5"></p>
+				  </div>
+				  <div id="section6" class="container-fluid">
+				  <h1>S&Iacute;MBOLOS MUERTOS</h1>
+				  <p id="hack.6"></p>
+				  </div>
+				  <div id="section7" class="container-fluid">
+				  <h1>S&Iacute;MBOLOS INACCESIBLES</h1>
+				  <p id="hack.7"></p>
+				  </div>
+				  <div id="section8" class="container-fluid">
+				  <h1>GRAM&Aacute;TICA FINAL</h1>
+				  <p id="hack.8"></p>
+				  </div>
+				  
+				
+ 
+ 
+</div>
+<br><br>
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h4>Proyecto PAPIME (PE106517)
+Hecho en M&eacute;xico, Universidad Nacional Aut&oacute;noma de M&eacute;xico (UNAM), todos los derechos reservados 2019. Esta p&aacute;gina puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuente completa y su direcci&oacute;n electr&oacute;nica. De otra forma, requiere permiso previo por escrito de la instituci&oacute;n.</h4>
+</div>
+
+
+
+   
+
+</body>
+
+
+</html>
+
+
+
+    <script>
+         /*Función que crea y agrega campos en la página principal para ingresar otro no terminal con sus producciones correspondientes*/
+    function agregarInputs(){
+      campo1=document.getElementById('form1');  //Obtiene el formulario referenciado por la id indicada (correspondiente al formulario que recibe los no terminales)
+    //El siguiente ciclo agrega unos saltos de línea a la página
+      entrada=document.createElement('input');  //Crea un elemento de etiqueta <input>
+      entrada.type='text';  //Incluye el atributo "type" al elemento <input>
+      entrada.placeholder='No terminal';  //Incluye el atributo "placeholder" al elemento <input>
+      entrada.setAttribute("class","form-control");
+      entrada.setAttribute("aria-describedby","sizing-addon1");
+      campo1.appendChild(entrada); //Agrega el elemento <input> al formulario indicado
+
+    //Mismo proceso que el anterior; esta vez para el formulario que recibe las producciones de cada no terminal
+      campo2=document.getElementById('form2');
+      entrada=document.createElement('input');
+      entrada.type='text';
+      entrada.placeholder='Producciones';
+      entrada.setAttribute("class","form-control");
+      entrada.setAttribute("aria-describedby","sizing-addon1");
+      campo2.appendChild(entrada);
+        
+       
+    }
+    </script>
+
+    <SCRIPT>
+        function iniciar()
+      {
+          var  f1= document.getElementById("form1");
+          var f2=document.getElementById("form2");
+          var f3=document.getElementById("alfabeto");
+
+          var nT=new Array();
+          var producciones=new Array();
+          var alfabeto=new Array();
+          var sI=0;
+
+          for (var i=0;i<f1.elements.length;i++)
+          {
+              nT.push(f1[i].value);
+              console.log("NO TERMINALES: ",nT);
+          }
+          for (var i=0;i<f2.elements.length;i++)
+          {
+              temp=f2[i].value.split(",");
+              producciones.push(temp);
+              console.log(producciones);
+          }
+
+          alfabeto=f3[0].value;
+          sI=nT[0];
+          console.log(alfabeto);
+          console.log(sI);
+
+          gramatica=new Array();
+          for(var i in nT){
+            gramatica[nT[i]]=producciones[i];
+          }
+          console.log(gramatica);
+
+		var p1 = document.createElement("p");
+        var n1 = document.createTextNode("S\u00EDmbolo inicial: "+sI);
+		p1.appendChild(n1);
+		var element1 = document.getElementById("hack.1");
+		element1.appendChild(p1);
+		
+		
+		
+		
+		var p2 = document.createElement("p");
+        var n2 = document.createTextNode("No terminales iniciales: "+nT);
+		p2.appendChild(n2);
+		var element2 = document.getElementById("hack.1");
+		element2.appendChild(p2);
+		
+		
+		
+		
+		
+		var p3 = document.createElement("p");
+        var n3 = document.createTextNode("Gram\u00E1tica Incial");
+		p3.appendChild(n3);
+		var element3 = document.getElementById("hack.1");
+		element3.appendChild(p3);
+		
+		
+		
+		
+        for (var i in gramatica) {
+			var p4 = document.createElement("p");
+			var n4 = document.createTextNode("Regla de producci\u00F3n " + i + " \u2192  " + gramatica[i]);
+			p4.appendChild(n4);
+			var element4 = document.getElementById("hack.1");
+			element4.appendChild(p4);
+        }
+		
+		
+		
+		
+		var p5 = document.createElement("p");
+        var n5 = document.createTextNode("Alfabeto: "+alfabeto);
+		p5.appendChild(n5);
+		var element5 = document.getElementById("hack.1");
+		element5.appendChild(p5);
+		
+		
+		/*
+        var p6 = document.createElement("p");
+        var n6 = document.createTextNode("INICIA SIMBOLOS MUERTOS");
+		p6.appendChild(n6);
+		var element6 = document.getElementById("hack.2");
+		element6.appendChild(p6);*/
+		
+		
+		
+        var p6 = document.createElement("p");
+        var n6 = document.createTextNode("S\u00EDmbolo inicial: "+sI);
+		p6.appendChild(n6);
+		var element6 = document.getElementById("hack.2");
+		element6.appendChild(p6);
+		
+		
+		
+		
+        var SMC = new simbolosMuertosClase(gramatica, nT, alfabeto); //KAZ ERROR
+		
+		
+		
+		
+        var p12 = document.createElement("p");
+        var n12 = document.createTextNode("FINALIZA S\u00EDMBOLOS MUERTOS");
+		p12.appendChild(n12);
+		var element12 = document.getElementById("hack.2");
+		element12.appendChild(p12);
+		
+		
+		
+        //----document.write("<br>");
+
+
+	/*
+        var p13 = document.createElement("p");
+        var n13 = document.createTextNode("INICIA SIMBOLOS INACCESIBLES");
+		p13.appendChild(n13);
+		var element13 = document.getElementById("hack");
+		element13.appendChild(p13);*/
+		
+		
+		
+        var p14 = document.createElement("p");
+        var n14 = document.createTextNode("S\u00EDmbolo inicial: "+sI);
+		p14.appendChild(n14);
+		var element14 = document.getElementById("hack.3");
+		element14.appendChild(p14);
+		
+
+        var SIC = new simbolosInaccesibles(SMC.PF, SMC.NTF, sI);
+        SIC.imprimir();
+		
+		
+		
+		
+        //document.write("<br>Alfabeto: "+alfabeto); ---NO TOCAR
+		
+		
+		
+		
+        var p19 = document.createElement("p");
+        var n19 = document.createTextNode("FINALIZA S\u00EDMBOLOS INACCESIBLES");
+		p19.appendChild(n19);
+		var element19 = document.getElementById("hack.3");
+		element19.appendChild(p19);
+		
+		
+        //document.write("<br>");
+		
+		
+		
+/*
+        var p20 = document.createElement("p");
+        var n20 = document.createTextNode("INICIA SIMBOLOS VACIOS");
+		p20.appendChild(n20);
+		var element20 = document.getElementById("hack");
+		element20.appendChild(p20);*/
+		
+		
+		
+		
+        //document.write("<br>Alfabeto: "+alfabeto);
+        var SVC = new simbolosVacios(SIC.gramatica, SIC.noTerminalesF, SIC.simboloInicial);
+        SVC.getFinal();
+		
+		
+		
+		
+		
+        var p23 = document.createElement("p");
+        var n23 = document.createTextNode("FINALIZA S\u00EDMBOLOS VAC\u00EDOS");
+		p23.appendChild(n23);
+		var element23 = document.getElementById("hack.4");
+		element23.appendChild(p23);
+		
+		
+		
+		
+		
+		
+		
+        //document.write("<br>");
+		
+		
+		
+/*
+        var p24 = document.createElement("p");
+        var n24 = document.createTextNode("INICIA SIMBOLOS UNITARIOS"); ///checar kaz
+		p24.appendChild(n24);
+		var element24 = document.getElementById("hack");
+		element24.appendChild(p24);
+		*/
+		
+		
+		
+        //document.write("<br>Alfabeto: "+alfabeto);
+		
+		
+		
+		var p25 = document.createElement("p");
+        var n25 = document.createTextNode("S\u00EDmbolo inicial : " + SVC.simboloInicial);
+		p25.appendChild(n25);
+		var element25 = document.getElementById("hack.5");
+		element25.appendChild(p25);
+		
+		
+		
+        var SUC = new SimbolosUnitarios(SVC.gramatica, SVC.noTerminales);//aqui me quede
+		
+		
+		
+        var p30 = document.createElement("p");
+        var n30 = document.createTextNode("FINALIZA S\u00EDMBOLOS UNITARIOS");
+		p30.appendChild(n30);
+		var element30 = document.getElementById("hack.5");
+		element30.appendChild(p30);
+		
+		
+		
+        //document.write("<br>");
+		
+		/*
+		var p31 = document.createElement("p");
+        var n31 = document.createTextNode("INICIA SIMBOLOS MUERTOS");
+		p31.appendChild(n31);
+		var element31 = document.getElementById("hack");
+		element31.appendChild(p31);
+		*/
+		
+        //document.write("<br>Alfabeto: "+alfabeto);
+		
+		
+		
+        var SMC = new simbolosMuertosClase2(SUC.gramatica, SUC.noTerminales, alfabeto);
+		
+		
+		
+        var p32 = document.createElement("p");
+        var n32 = document.createTextNode("FINALIZA S\u00EDMBOLOS MUERTOS");
+		p32.appendChild(n32);
+		var element32 = document.getElementById("hack.6");
+		element32.appendChild(p32);
+		
+		
+		
+        //document.write("<br>");
+		
+		
+/*
+        var p33 = document.createElement("p");
+        var n33 = document.createTextNode("INICIA SIMBOLOS INACCESIBLES");
+		p33.appendChild(n33);
+		var element33 = document.getElementById("hack");
+		element33.appendChild(p33);
+		*/
+		
+		
+        //document.write("<br>Alfabeto: "+alfabeto);
+		
+		
+        var SIC = new simbolosInaccesibles2(SMC.PF, SMC.NTF, SVC.simboloInicial);
+		
+		
+		
+        SIC.imprimir();
+		
+		
+		
+		
+        var p34 = document.createElement("p");
+        var n34 = document.createTextNode("FINALIZA S\u00EDMBOLOS INACCESIBLES");
+		p34.appendChild(n34);
+		var element34 = document.getElementById("hack.7");
+		element34.appendChild(p34);
+		
+		
+        //document.write("<br>");
+		
+		
+		
+        var p35 = document.createElement("p");
+        var n35 = document.createTextNode("S\u00EDmbolo inicial final: " + SVC.simboloInicial);
+		p35.appendChild(n35);
+		var element35 = document.getElementById("hack.8");
+		element35.appendChild(p35);
+		
+		
+		
+		
+		
+		
+        var p36 = document.createElement("p");
+        var n36 = document.createTextNode("Alfabeto: "+ alfabeto);
+		p36.appendChild(n36);
+		var element36 = document.getElementById("hack.8");
+		element36.appendChild(p36);
+		
+		
+		
+		
+		
+		
+        var p37 = document.createElement("p");
+        var n37 = document.createTextNode("No terminales finales: "+ SIC.noTerminalesF);
+		p37.appendChild(n37);
+		var element37 = document.getElementById("hack.8");
+		element37.appendChild(p37);
+		
+		
+		
+		
+		
+		
+		
+        var p38 = document.createElement("p");
+        var n38 = document.createTextNode("Gram\u00E1tica Final");
+		p38.appendChild(n38);
+		var element38 = document.getElementById("hack.8");
+		element38.appendChild(p38);
+		
+		
+		
+		
+		
+        for (var i in SIC.gramatica) {
+		
+		
+		
+            var p39 = document.createElement("p");
+			var n39 = document.createTextNode("Regla de producci\u00F3n " + i + " \u2192  " + SIC.gramatica[i]);
+			p39.appendChild(n39);
+			var element39 = document.getElementById("hack.8");
+			element39.appendChild(p39);
+			
+			
+        }
+
+
+
+
+        var p40 = document.createElement("p");
+		var n40 = document.createTextNode("FINALIZA PROGRAMA");
+		p40.appendChild(n40);
+		var element40 = document.getElementById("hack.8");
+		element40.appendChild(p40);
+		
+		
+
+        //document.write("<br>");
+		
+        }       
+    </SCRIPT>
+    
+    
+ 
